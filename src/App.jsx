@@ -1,3 +1,14 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ProfileUpdatePage from "./pages/ProfileUpdatePage";
+import NotFound from "./pages/NotFound";
+
 export default function App() {
-  return <div className="bg-red-500">hii there</div>;
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<ProfileUpdatePage />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
